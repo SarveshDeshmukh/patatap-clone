@@ -5,9 +5,27 @@
 	<title>CIRCLES</title>
 	<script type="text/javascript" src="paper-full.js"></script>
 	<script type="text/paperscript" canvas="myCanvas">
+	var circleArray = [];
 		function onKeyDown(event) {
-			new Path.Circle(new Point(100, 100), 10).fillColor = "orange";
+			
+			var maxPoint = new Point(view.size.width, view.size.height);
+			var randomPoint = Point.random();
+			var point = maxPoint * randomPoint;
+			var circleDraw = new Path.Circle(point,500);
+			circleDraw.fillColor = "orange";
+			circleArray.push(circleDraw);		
+}
+
+		function onFrame(event){
+
+			for(var i = 0 ; i < circleArray.length; i++ )
+
+		{
+			circleArray[i] .fillColor.hue += 1;
+			circleArray[i].scale(.9);
+			
 		}
+	}
 	</script>
 	<link rel="stylesheet" type="text/css" href="Circles.css">
 </head>
