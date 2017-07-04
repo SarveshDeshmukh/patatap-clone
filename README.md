@@ -1,2 +1,3 @@
 # Patatap Clone
-This is a Patatap clone project. When the page loads, on evey key that the user presses, there will be some animation and a sound will be played.   
+   
+Patatap is a portable animation and sound kit. With the touch of a finger create melodies charged with moving shapes.
